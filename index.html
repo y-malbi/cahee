@@ -3,13 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cahee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="favicon.png">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<header class="ca-header">
-		<div class="ca-container">
+	<section class="ca-home" id="home">
+		<header class="ca-header">
 			<div class="ca-header-navigation">
 				<div class="row">
 					<div class="col-2 ca-header-logo">
@@ -19,8 +20,11 @@
 					</div><!-- /.ca-header-logo -->
 						<!-- /.col-6 -->
 					<div class="col-10 padding-none">
+						<button id="show-menu">
+							<span class="icon-menu"></span>
+						</button>
 						<ul class="ca-header-navigation-menu">
-							<li class="ca-header-navigation-menu__element"><a href="#">Home</a></li>
+							<li class="ca-header-navigation-menu__element"><a href="#home">Home</a></li>
 							<li class="ca-header-navigation-menu__element"><a href="#about_us">About</a></li>
 							<li class="ca-header-navigation-menu__element"><a href="#services">Services</a></li>
 							<li class="ca-header-navigation-menu__element"><a href="#gallery">Gallery</a></li>
@@ -30,27 +34,28 @@
 					</div><!-- /.col-6 -->
 				</div><!-- /.row -->
 			</div>
-
-			<div class="row">
-				<div class="col-4 text-left">
-					<h3 class="ca-header__name">Fresh Life</h3>
-					<p class="ca-header__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-					<button class="ca-header__button shadow" type="button">GET FREE NOW</button>
+		</header>
+		<div class="ca-container">
+			<div class="row padding-section">
+				<div class="col-4 text-left home-content">
+					<h3 class="ca-home__name">Fresh Life</h3>
+					<p class="ca-home__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+					<button class="ca-home__button shadow" type="button">GET FREE NOW</button>
 				</div><!-- /.col-4 -->
 			</div> <!-- /.row -->
 			
-			<a class="ca-header__next-link" href="#about_us">
+			<a class="ca-home__next-link" href="#about_us">
 				<img src="img/scroll.png" alt="scroll"/>
 			</a>
 		</div><!-- /.ca-container -->
-	</header>
+	</section>
 
 	<main>
 		<section class="ca-section ca-about-us white-text" id="about_us">
 			<div class="ca-container">
 
 				<div class="row">
-					<div class="col-6">
+					<div class="col-6 show-img">
 						<div class="ca-about-us__img">
 							<img src="img/raspberries.png" alt="raspberies"/>
 						</div><!-- /.ca-about-us__img -->
@@ -119,12 +124,12 @@
 						<img class="shadow" src="img/gallery/peach.jpg" alt="peach">
 					</div><!-- /.col-8 -->
 					<div class="col-4">
-						<div class="row">
+						<div class="row margin-top">
 							<div class="col-12">
 								<img class="shadow" src="img/gallery/Blueberries.jpg" alt="blueberries">
 							</div><!-- /.col-12 -->
 						</div><!-- /.row -->
-						<div class="row">
+						<div class="row float-right">
 							<div class="col-12">
 								<img class="shadow" src="img/gallery/blackberry.jpg" alt="blackberry">
 							</div><!-- /.col-12 -->
@@ -133,16 +138,16 @@
 				</div><!-- /.row -->
 
 				<div class="row">
-					<div class="col-6">
+					<div class="col-6 bottom-img">
 						<img class="shadow" src="img/gallery/milk.jpg" alt="milk">
 					</div><!-- /.col-6 -->
-					<div class="col-6">
+					<div class="col-6 bottom-img">
 						<img class="shadow" src="img/gallery/hurma.jpg" alt="hurma">
 					</div><!-- /.col-6 -->
 				</div><!-- /.row -->
 
 				<div class="row">
-					<div class="col-offset-5 col-2  ca-gallery__button--padding">
+					<div class="ca-gallery__button--padding">
 						<button class="ca-gallery__button shadow" type="button">View more</button>
 					</div><!-- /.col-2 -->
 				</div><!-- /.row -->
@@ -154,14 +159,14 @@
 			<div class="ca-container">
 
 				<div class="row">
-					<div class="col-6 text-left">
+					<div class="col-6 ca-subscribe-content text-left">
 						<h3 class="ca-subscribe__name">Subscribe To Us</h3>
 						<p class="ca-subscribe__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 					</div><!-- /.col-6 -->
 				</div><!-- /.row -->
 
 				<div class="row">
-					<div class="col-6">
+					<div class="col-6 email">
 						<input class="ca-subscribe__email" type="email" name="email" placeholder="Your email address...">
 					</div><!-- /.col-6 -->
 					<div class="col-2">
@@ -189,8 +194,10 @@
 							<p class="ca-blog__date--month">Nov</p>
 						</div><!-- /.ca-blog__date -->
 						<div class="ca-blog__image--text text-left">
-							<h3 class="ca-blog__title">Green Smoothies: Too Much of a Good Thing?</h3>
-							<p class="ca-blog__author">By Auskteez - 2 hours ago</p>
+							<!-- <a href="#"> -->
+								<h3 class="ca-blog__title">Green Smoothies: Too Much of a Good Thing?</h3>
+								<p class="ca-blog__author">By Auskteez - 2 hours ago</p>
+							<!-- </a> -->
 						</div><!-- /.ca-blog__image--text -->
 					</div><!-- /.ca-blog__image -->
 					<div class="ca-blog__image col-4">
@@ -221,7 +228,7 @@
 					</div><!-- /.ca-blog__image -->
 				</div><!-- /.row -->
 				<div class="row">
-					<div class="col-offset-5 col-2  ca-blog__button--padding">
+					<div class="ca-blog__button--padding">
 						<button class="ca-blog__button shadow" type="button">View more</button>
 					</div><!-- /.col-2 -->
 				</div><!-- /.row -->
@@ -230,7 +237,7 @@
 
 		<section class="ca-section ca-contact" id="contact">
 			<div class="ca-container">
-				<div class="ca-section__content col-4 col-offset-4">
+				<div class="ca-section__content ca-contact__content col-4 col-offset-4">
 					<h2 class="ca-section__name ca-contact__name">Contact</h2>
 					<p class="ca-contact__text">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
 				</div><!-- /.ca-section__content -->
@@ -263,19 +270,24 @@
 	<footer class="ca-footer">
 		<div class="ca-container">
 			<div class="row">
-				<div class="col-3">
+				<div class="col-4 ca-footer-copyright">
 					<p class="copyright">&copy; 2015 Company. All right reserved.</p>
-				</div><!-- /.col-3 -->
-				<div class="col-6">
+				</div><!-- /.col-4 -->
+				<div class="col-4 ca-footer-logo">
 					<img class="ca-footer-logo" src="img/logo-small.png" alt="logo">
-				</div><!-- /.col-6 -->
-				<div class="col-3">
+				</div><!-- /.col-4 -->
+				<div class="col-4">
 					<p class="ca-footer-author">Made with <span class="red-text">love</span> by Auskteez</p>
-				</div><!-- /.col-3 -->
+				</div><!-- /.col-4 -->
 			</div><!-- /.row -->
 			
 		</div><!-- /.ca-container -->
 	</footer>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script rel="stylesheet" src="js/main.js"></script>
 
 </body>
 </html>
