@@ -32,11 +32,6 @@
   content: "\ea0f";
 }
 
-.icon-menu-rotate:before {
-  content: "\e9bd";
-  transform: rotate(-90deg);
-}
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -579,7 +574,9 @@ a.active{
 .ca-contact__your-info:hover,
 .ca-contact__your-message:hover
 .ca-contact__your-info:focus,
-.ca-contact__your-message:focus{
+.ca-contact__your-message:focus,
+.ca-contact__your-info:active,
+.ca-contact__your-message:active{
     border-left: 5px solid #355b82;
     padding-left: 15px;
     background: rgb(0, 196, 196);
