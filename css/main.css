@@ -224,7 +224,7 @@ button:active,
 }
 /*Home*/
 .ca-home{
-    background: #ede9ec url(../img/Strawberry.png) no-repeat center center;
+    background: #ede9ec url(../img.min/Strawberry.png) no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     position: relative;
@@ -419,7 +419,7 @@ a.active{
 }
 /*Subscribe*/
 .ca-subscribe{
-    background: #fff url(../img/blueberries2.jpg) no-repeat right center;
+    background: #fff url(../img.min/blueberries2.jpg) no-repeat right center;
     background-size: cover;
     padding: 128px 0 163px 0;
 }
@@ -531,7 +531,7 @@ a.active{
 
 /*Contact*/
 .ca-contact{
-    background: #b5d0dc url(../img/bg-contact.png) no-repeat center center;
+    background: #b5d0dc url(../img.min/bg-contact.png) no-repeat center center;
     background-size: cover;
     padding: 88px 0 111px 0;
 }
