@@ -43,7 +43,6 @@ html,body{
     text-align: center;
     line-height: 1.59;
     color: #262626;
-    /*background:#fff;*/
 }
 img{
     display: block;
@@ -709,21 +708,26 @@ a.active{
         position: relative;
         z-index: 1;
         opacity: 1;
-        color: #000;
+        color: #ff6033;
         right: 29px;
         top: 5px;
     }
+    a.active{
+        color: #ff6033;
+        border-color: transparent;
+
+    }
     header .ca-header-navigation-menu{
-        transform: translateY(-150%);
         position: absolute;
         display: block;
         width: auto;
         top: 60px;
         padding: 20px 0 20px;
         right: 0;
-        z-index: -1;
+        opacity: 0;
+        transform: scale(1,0);
+        transform-origin: 0 0;
         background: rgba(255,255,255, 0.8);
-        transition: transform 0.5s ease;
     }
     header .ca-header-navigation-menu li{
         display: block;
@@ -732,11 +736,13 @@ a.active{
         padding: 0 1rem;
         line-height: 2;
     }
-    #show-menu.open + .ca-header-navigation-menu{
-        transform: translateY(0%);
-        z-index: 1;
+    .ca-header-navigation-menu.open{
+        transform: scale(1,1);
+        opacity: 1;
     }
-
+    .ca-header-navigation-menu.animation{
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
 
     .ca-header{
         height: 60px;
@@ -853,7 +859,6 @@ a.active{
     }
     .ca-contact__our-contacts{
         text-align: center;
-        /*background: rgba(0, 196, 196, 0.2)*/
         background: rgba(255,255,255, 0.5);
    }
    .ca-footer{

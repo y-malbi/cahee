@@ -1,16 +1,14 @@
-$('.ca-header-navigation-menu').on('click', 'a', function(event){
+var $topMenu = $('.ca-header-navigation-menu'),
+		$showMenuBtn = $('#show-menu');
+
+$topMenu.on('click', 'a', function(event){
 	event.preventDefault();
-	var link = $(this).attr('href'); //id блока
-	var distanse = $(link).offset().top; //px
+	var link = $(this).attr('href');
+	var distanse = $(link).offset().top; 
 	$('html, body').animate({
 	scrollTop: distanse
-	}, 500); //500 - время в мс
-
+	}, 500);
 });
-
-// $(document).ready(function(){
-// 	$('.ca-gallery:has(.ca-gallery__button)').css('background', 'red');
-// });
 
 $(window).scroll(function(){
 	var dist = $('.ca-home__name').offset().top;
@@ -32,8 +30,6 @@ $(window).scroll(function(){
 });
 
 
-
-// $('.ca-header-navigation-menu').children().first().children().addClass('active');
 $('[href="#home"]').addClass('active');
 	
 $('.ca-header-navigation-menu > li > a').click(function(e){
@@ -45,16 +41,15 @@ $('.ca-header-navigation-menu > li > a').click(function(e){
 });
 
 // Responsive menu
-$('#show-menu').on('click', function(){
-	// $(this).toggleClass('open');
-	if ($(this).hasClass('open')){
-		$(this).removeClass('open');
+$showMenuBtn.on('click', function(){
+	if ($topMenu.hasClass('open')){
+		$topMenu.removeClass('open');
 		$(this).find('span')
 			   .removeClass('icon-cross')
 			   .addClass('icon-menu');
 	}
 	else{
-		$(this).addClass('open');
+		$topMenu.addClass('open');
 		$(this).find('span')
 			   .removeClass('icon-menu')
 			   .addClass('icon-cross');
@@ -62,12 +57,20 @@ $('#show-menu').on('click', function(){
 });
 $(window).resize(function(){
 	if ($(window).width() > 800){
-		if ($('#sow-menu').hasClass('open')){
-			$('#show-menu').removeClass('open')
-				.find('span')
-				.removeClass('icon-cross')
-				.addClass('icon-menu');
-		}
+		$topMenu.removeClass('animation')
+				.removeClass('open');
+		$showMenuBtn.find('span')
+			   .removeClass('icon-cross')
+			   .addClass('icon-menu');
+	}else{
+		$topMenu.addClass('animation');
 	}
+});
+
+$topMenu.on('click', 'a', function(){
+	$topMenu.removeClass('open');
+	$showMenuBtn.find('span')
+				.removeClass('icon-cross')
+			   .addClass('icon-menu');
 });
 
